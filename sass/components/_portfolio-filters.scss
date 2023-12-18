@@ -1,0 +1,46 @@
+.filter__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 40px;
+
+  @include tablet {
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  @include desctop {
+    margin-bottom: 50px;
+  }
+}
+  
+.filter__btn {
+  margin-bottom: 15px;
+  padding: 6px 22px;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  flex-shrink: 0;
+  color: var(--title-color);
+  background-color: var(--bcg-color);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.62;
+  letter-spacing: 0.48px;
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--secondary-text-color);
+    box-shadow: 
+      0px 2px 2px 0px rgba(0, 0, 0, 0.12), 
+      0px 1px 2px 0px rgba(0, 0, 0, 0.08), 
+      0px 3px 1px 0px rgba(0, 0, 0, 0.10);
+  }
+  
+  transition: 
+    background-color 250ms var(--timing-function), 
+    color 250ms var(--timing-function), 
+    box-shadow 250ms var(--timing-function);
+}

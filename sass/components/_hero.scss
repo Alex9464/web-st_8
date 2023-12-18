@@ -1,0 +1,36 @@
+.hero {
+  margin: 0 auto;
+  padding: 200px 0;
+  text-align: center;
+}
+  
+.overlay {
+  height: 600px;
+  max-width: 1600px;
+  background-color: var(--secondary-bcg-color);
+  background-image: 
+    linear-gradient(to right, rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)), 
+    url(../img/desctop/Hero-desctop-x1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+  
+.hero__title {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  max-width: 696px;
+  color: var(--bcg-color);
+  
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 60px;
+  letter-spacing: 2.64px;
+  text-transform: uppercase;
+}
+
+.hero__button {
+  padding-left: 32px;
+  padding-right: 32px;
+}

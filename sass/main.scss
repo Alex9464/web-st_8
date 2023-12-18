@@ -1,0 +1,20 @@
+@import "./utils/mixins";
+@import "./base/base";
+@import "./base/container";
+@import "./base/section";
+@import "./base/btn";
+
+@import "./utils/variables";
+@import "./utils/hidden";
+
+@import "./components/header";
+@import "./components/hero";
+@import "./components/peculiarities";
+@import "./components/activity";
+@import "./components/team";
+@import "./components/clients";
+@import "./components/footer";
+@import "./components/modal";
+
+@import "./components/portfolio-filters";
+@import "./components/portfolio-cards";

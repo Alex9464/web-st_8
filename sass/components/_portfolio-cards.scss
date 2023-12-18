@@ -1,0 +1,79 @@
+.card__set {
+  display: block;
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+  
+.card__item { 
+  transition: box-shadow 250ms var(--timing-function)
+  {}
+  &:hover,
+  &:focus {
+    box-shadow: 
+      1px 4px 6px 0px rgba(0, 0, 0, 0.16), 
+      0px 4px 4px 0px rgba(0, 0, 0, 0.06), 
+      0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+  }
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: calc((100% - 30px) / 2);
+  }
+}
+  
+.card__wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.card__wrapp-text {
+  position: absolute;
+  color: var(--secondary-text-color);
+  background-color: rgba(33, 150, 243, 0.90);
+  padding: 63px 24px;
+  
+  
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.54px;
+  
+  transition: transform 300ms var(--timing-function);
+
+  .card__wrapper:hover &,
+  .card__wrapper:focus & {
+    transform: translateY(-100%);
+  }
+}
+  
+.card__content {
+  padding: 20px 24px;
+  border-left: var(--potfolio-border-card);
+  border-right: var(--potfolio-border-card);
+  border-bottom: var(--potfolio-border-card);
+}
+  
+.card__title {
+  margin-bottom: 4px;
+  
+  color: var(--title-color);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 2;
+  letter-spacing: 1.08px;
+}
+  
+.card__text {
+  color: var(--primary-text-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.87;
+  letter-spacing: 0.48px;
+}
