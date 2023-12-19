@@ -64,16 +64,24 @@
   margin-bottom: 4px;
   
   color: var(--title-color);
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 2;
   letter-spacing: 1.08px;
+
+  @include mobile {
+    font-size: 18px;
+  }
 }
   
 .card__text {
   color: var(--primary-text-color);
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 1.87;
   letter-spacing: 0.48px;
+
+  @include mobile {
+    font-size: 16px;
+  }
 }

@@ -1,0 +1,12 @@
+.mob-menu {
+    display: flex;
+    align-items: center;
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.mob-menu_btn-open {
+    cursor: pointer;
+}
