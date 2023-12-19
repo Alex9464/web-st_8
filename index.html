@@ -29,13 +29,13 @@
             <ul class="contactlist">
                 <li class="contactlist__item">
                     <a href="mailto:info@devstudio.com" class="contactlist__link">
-                        <svg class="contact__icon" width="16" height="12"><use href="./img/symbol-defs.svg#icon-envelope-hover"></use></svg>
+                        <svg class="contact__icon envelop-icon" width="14" height="10"><use href="./img/symbol-defs.svg#icon-envelope-hover"></use></svg>
                         info@devstudio.com
                     </a>
                 </li>
                 <li class="contactlist__item">
                     <a href="tel:+380961111111" class="contactlist__link">
-                        <svg class="contact__icon" width="10" height="16"><use href="./img/symbol-defs.svg#icon-smartphone"></use></svg>
+                        <svg class="contact__icon phone-icon" width="10" height="14"><use href="./img/symbol-defs.svg#icon-smartphone"></use></svg>
                         +38 096 111 11 11
                     </a>
                 </li>
@@ -81,15 +81,21 @@
                 <h2 class="title-section">Чим ми займаємося</h2>
                 <ul class="activity__list">
                     <li class="activity__item">
-                        <img src="./img/desctop/wwd-1-desctop-x1.jpg" alt="typing text keyboard">
+                        <img srcset="./img/desctop/wwd-1-desctop-x1.jpg 1x,
+                                    ./img/desctop/wwd-1-desctop-x2.jpg 2x" 
+                            src="./img/desctop/wwd-1-desctop-x1.jpg" alt="typing text keyboard"/>
                         <p class="activity__text">Десктопні додатки</p>
                     </li>
                     <li class="activity__item">
-                        <img src="./img/desctop/wwd-2-desctop-x1.jpg" alt="phone & laptop">
+                        <img srcset="./img/desctop/wwd-2-desctop-x1.jpg 1x,
+                                    ./img/desctop/wwd-2-desctop-x2.jpg 2x" 
+                            src="./img/desctop/wwd-2-desctop-x1.jpg" alt="phone & laptop"/>
                         <p class="activity__text">Мобільні додатки</p>
                     </li>
                     <li class="activity__item">
-                        <img src="./img/desctop/wwd-3-desctop-x1.jpg" alt="tablet color cube">
+                        <img srcset="./img/desctop/wwd-3-desctop-x1.jpg 1x,
+                                    ./img/desctop/wwd-3-desctop-x2.jpg 2x" 
+                            src="./img/desctop/wwd-3-desctop-x1.jpg" alt="tablet color cube"/>
                         <p class="activity__text">Дизайнерські рішення</p>
                     </li>
                 </ul>
@@ -102,7 +108,16 @@
                 <ul class="team__list">
                     <li class="team__item">
                         <picture>
-                            <img src="./img/desctop/team-1-desctop-x1.jpg" alt="Ihor Demyanenko">
+                            <source srcset="./img/desctop/team-1-desctop-x1.jpg 1x,
+                                            ./img/desctop/team-1-desctop-x2.jpg 2x"
+                                    media="(min-width: 1200px)"/>
+                            <source srcset="./img/tablet/team-1-tablet-x1.jpg 1x,
+                                            ./img/tablet/team-1-tablet-x2.jpg 2x"
+                                    media="(min-width: 768px)"/>
+                            <source srcset="./img/mobile/team-1-mobile-x1.jpg 1x,
+                                            ./img/mobile/team-1-mobile-x2.jpg 2x"
+                                    media="(max-width: 767px)"/>
+                            <img src="./img/desctop/team-1-desctop-x1.jpg" alt="Ihor Demyanenko"/>
                         </picture>
                         <div class="team__content">
                             <h3 class="team__title">Ігор Дем'яненко</h3>
@@ -141,6 +156,15 @@
                     </li>
                     <li class="team__item">
                         <picture>
+                            <source srcset="./img/desctop/team-2-desctop-x1.jpg 1x,
+                                            ./img/desctop/team-2-desctop-x2.jpg 2x"
+                                    media="(min-width: 1200px)"/>
+                            <source srcset="./img/tablet/team-2-tablet-x1.jpg 1x,
+                                            ./img/tablet/team-2-tablet-x2.jpg 2x"
+                                    media="(min-width: 768px)"/>
+                            <source srcset="./img/mobile/team-2-mobile-x1.jpg 1x,
+                                            ./img/mobile/team-2-mobile-x2.jpg 2x"
+                                    media="(max-width: 767px)"/>
                             <img src="./img/desctop/team-2-desctop-x1.jpg" alt="Olha Repina">
                         </picture>
                         <div class="team__content">
@@ -180,7 +204,16 @@
                     </li>
                     <li class="team__item">
                         <picture>
-                            <img src="./img/desctop/team-3-desctop-x1.jpg" alt="Mykola Tarasov">
+                            <source srcset="./img/desctop/team-3-desctop-x1.jpg 1x,
+                                            ./img/desctop/team-3-desctop-x2.jpg 2x"
+                                    media="(min-width: 1200px)"/>
+                            <source srcset="./img/tablet/team-3-tablet-x1.jpg 1x,
+                                            ./img/tablet/team-3-tablet-x2.jpg 2x"
+                                    media="(min-width: 768px)"/>
+                            <source srcset="./img/mobile/team-3-mobile-x1.jpg 1x,
+                                            ./img/mobile/team-3-mobile-x2.jpg 2x"
+                                    media="(max-width: 767px)"/>
+                            <img src="./img/desctop/team-3-desctop-x1.jpg" alt="Mykola Tarasov"/>
                         </picture>
                         <div class="team__content">
                             <h3 class="team__title">Микола Тарасов</h3>
@@ -219,7 +252,16 @@
                     </li>
                     <li class="team__item">
                         <picture>
-                            <img src="./img/desctop/team-4-desctop-x1.jpg" alt="Mykhajlo Ermakhow">
+                            <source srcset="./img/desctop/team-4-desctop-x1.jpg 1x,
+                                            ./img/desctop/team-4-desctop-x2.jpg 2x"
+                                    media="(min-width: 1200px)"/>
+                            <source srcset="./img/tablet/team-4-tablet-x1.jpg 1x,
+                                            ./img/tablet/team-4-tablet-x2.jpg 2x"
+                                    media="(min-width: 768px)"/>
+                            <source srcset="./img/mobile/team-4-mobile-x1.jpg 1x,
+                                            ./img/mobile/team-4-mobile-x2.jpg 2x"
+                                    media="(max-width: 767px)"/>
+                            <img src="./img/desctop/team-4-desctop-x1.jpg" alt="Mykhajlo Ermakhow"/>
                         </picture>
                         <div class="team__content">
                             <h3 class="team__title">Михайло Єрмаков</h3>

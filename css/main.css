@@ -2,7 +2,12 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: var(--secondary-text-color);
   color: var(--primary-text-color);
-  padding-top: 80px;
+  padding-top: 60px;
+}
+@media screen and (min-width: 768px) {
+  body {
+    padding-top: 80px;
+  }
 }
 
 h1,
@@ -123,12 +128,20 @@ a {
   z-index: 1;
   top: 0;
   width: 100%;
-  min-height: 80px;
+  height: 60px;
+  display: flex;
   background-color: var(--secondary-text-color);
   border-bottom: 1px solid #ECECEC;
 }
+@media screen and (min-width: 768px) {
+  .header {
+    height: 80px;
+    padding: 0;
+  }
+}
 
 .head {
+  display: flex;
   align-items: center;
 }
 
@@ -140,18 +153,35 @@ a {
   line-height: normal;
   letter-spacing: 0.72px;
 }
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+  }
+}
 
 .logo__part-header {
   color: var(--title-color);
 }
 
 .navigation {
+  display: flex;
   align-items: center;
 }
 
 .navigation__list {
-  margin-left: 93px;
+  display: none;
+  margin-left: 88px;
   gap: 50px;
+}
+@media screen and (min-width: 768px) {
+  .navigation__list {
+    display: inline-flex;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .navigation__list {
+    margin-left: 93px;
+  }
 }
 
 .navigation__item {
@@ -159,6 +189,7 @@ a {
 }
 
 .navigation__link {
+  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--title-color);
@@ -179,7 +210,7 @@ a {
   width: 100%;
   height: 4px;
   left: 0;
-  bottom: -1px;
+  bottom: 0px;
   border-radius: 4px;
   background-color: var(--accent-color);
   transform-origin: left;
@@ -198,8 +229,21 @@ a {
   }
 }
 .contactlist {
-  margin-left: auto;
-  gap: 50px;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .contactlist {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contactlist {
+    flex-direction: row;
+    gap: 50px;
+  }
 }
 
 .contact__icon {
@@ -212,14 +256,30 @@ a {
   fill: var(--accent-color);
 }
 
+@media screen and (min-width: 1200px) {
+  .envelop-icon {
+    width: 16px;
+    height: 12px;
+  }
+  .phone-icon {
+    width: 10px;
+    height: 16px;
+  }
+}
 .contactlist__link {
+  display: flex;
   align-items: center;
   color: var(--primary-text-color);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   line-height: normal;
   letter-spacing: 0.28px;
   transition: color 250ms var(--timing-function);
+}
+@media screen and (min-width: 1200px) {
+  .contactlist__link {
+    font-size: 14px;
+  }
 }
 .contactlist__link:hover, .contactlist__link:focus {
   color: var(--accent-color);
@@ -236,10 +296,36 @@ a {
   height: 600px;
   max-width: 1600px;
   background-color: var(--secondary-bcg-color);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/desctop/Hero-desctop-x1.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/mobile/Hero-mobile-x1.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .overlay {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/mobile/Hero-mobile-x2.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .overlay {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/tablet/Hero-tablet-x1.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/tablet/Hero-tablet-x2.jpg);
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .overlay {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/desctop/Hero-desctop-x1.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/desctop/Hero-desctop-x2.jpg);
+  }
 }
 
 .hero__title {
@@ -248,11 +334,16 @@ a {
   margin-bottom: 30px;
   max-width: 696px;
   color: var(--bcg-color);
-  font-size: 44px;
+  font-size: 26px;
   font-weight: 900;
   line-height: 60px;
   letter-spacing: 2.64px;
   text-transform: uppercase;
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+  }
 }
 
 .hero__button {
@@ -326,6 +417,11 @@ a {
   letter-spacing: 0.42px;
   text-transform: uppercase;
 }
+@media screen and (max-width: 767px) {
+  .peculiarities__title {
+    text-align: center;
+  }
+}
 
 .peculiarities__text {
   font-size: 14px;
@@ -387,13 +483,19 @@ a {
 }
 
 .title-section {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   text-align: center;
   color: var(--title-color);
   font-size: 28px;
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.84px;
+}
+@media screen and (min-width: 1200px) {
+  .title-section {
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
 }
 
 .team__list {
@@ -417,7 +519,7 @@ a {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  width: 270px;
+  width: 450px;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   background-color: var(--secondary-text-color);
@@ -427,10 +529,20 @@ a {
     width: calc((100% - 30px) / 2);
   }
 }
+@media screen and (min-width: 1200px) {
+  .team__item {
+    width: 270px;
+  }
+}
 
 .team__content {
   padding-top: 30px;
   padding-bottom: 24px;
+}
+@media screen and (min-width: 1200px) {
+  .team__content {
+    padding-bottom: 30px;
+  }
 }
 
 .team__title {
@@ -618,8 +730,10 @@ a {
   letter-spacing: 0.42px;
 }
 
-.footer-soc {
-  margin: 60px 0;
+@media screen and (max-width: 767px) {
+  .footer-soc {
+    margin: 60px 0;
+  }
 }
 
 .footer__text {
@@ -665,6 +779,11 @@ a {
 
 .footerForm {
   align-items: end;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footerForm {
+    margin-top: 60px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footerForm {

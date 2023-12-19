@@ -10,10 +10,48 @@
   background-color: var(--secondary-bcg-color);
   background-image: 
     linear-gradient(to right, rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)), 
-    url(../img/desctop/Hero-desctop-x1.jpg);
+    url(../img/mobile/Hero-mobile-x1.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: 
+        linear-gradient(to right, rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)), 
+        url(../img/mobile/Hero-mobile-x2.jpg);
+    }
+
+  @include tablet {
+    background-image: 
+      linear-gradient(to right, rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)), 
+      url(../img/tablet/Hero-tablet-x1.jpg);
+
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+      background-image: 
+        linear-gradient(to right, rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)), 
+        url(../img/tablet/Hero-tablet-x2.jpg);
+        background-size: cover;
+      }
+  }
+  
+
+  @include desctop {
+    background-image: 
+      linear-gradient(to right, rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)), 
+      url(../img/desctop/Hero-desctop-x1.jpg);
+
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+      background-image: 
+        linear-gradient(to right, rgba(47, 48, 58, 0.40), rgba(47, 48, 58, 0.40)), 
+        url(../img/desctop/Hero-desctop-x2.jpg);
+      }
+  }
 }
   
 .hero__title {
@@ -23,11 +61,15 @@
   max-width: 696px;
   color: var(--bcg-color);
   
-  font-size: 44px;
+  font-size: 26px;
   font-weight: 900;
   line-height: 60px;
   letter-spacing: 2.64px;
   text-transform: uppercase;
+
+  @include desctop {
+    font-size: 44px;
+  }
 }
 
 .hero__button {
