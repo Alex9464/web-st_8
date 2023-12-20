@@ -26,10 +26,42 @@
                     <li class="navigation__item"><a href="#" class="navigation__link">Контакти</a></li>
                 </ul>
             </nav>
-            <div class="mob-menu">
-                <svg class="mob-menu_btn-open" width="40" height="40">
+            <button type="button" class="mob-menu__btn" data-open-menu>
+                <svg class="mob-menu__open" width="40" height="40">
                     <use href="./img/symbol-defs.svg#icon-menu_40px"></use>
                 </svg>
+            </button>
+            <div class="mob-menu is-hidden" data-menu>
+                <div class="menu-container">
+                    <div class="mob-menu__top">
+                        <button type="button" class="mob-menu__btn" data-close-menu>
+                            <svg class="mob-menu__close" width="40" height="40">
+                                <use href="./img/symbol-defs.svg#icon-close_40px"></use>
+                            </svg>
+                        </button>
+                        <ul class="mob-menu__list">
+                            <li class="mob-menu__item"><a href="index.html" class="mob-menu__link">Студія</a></li>
+                            <li class="mob-menu__item"><a href="portfolio.html" class="mob-menu__link">Портфоліо</a></li>
+                            <li class="mob-menu__item"><a href="#" class="mob-menu__link">Контакти</a></li>
+                        </ul>
+                    </div>
+                    <div class="mob-menu__bottom">
+                        <ul class="mob-contactlist">
+                        <li class="mob-contactlist__item">
+                            <a href="tel:+380961111111" class="mob-contactlist__phone">+38 096 111 11 11</a>
+                        </li>
+                        <li class="mob-contactlist__item">
+                            <a href="mailto:info@devstudio.com" class="mob-contactlist__mail">info@devstudio.com</a>
+                        </li>
+                    </ul>
+                    <ul class="mob-soc">
+                        <ul class="mob-soc__item line"><a class="mob-soc__link" href="">Instagram</a></ul>
+                        <ul class="mob-soc__item line"><a class="mob-soc__link" href="">Twitter</a></ul>
+                        <ul class="mob-soc__item line"><a class="mob-soc__link" href="">Facebook</a></ul>
+                        <ul class=""><a class="mob-soc__link" href="">LinkedIn</a></ul>
+                    </ul>
+                    </div>
+                </div>
             </div>
             <ul class="contactlist">
                 <li class="contactlist__item">
@@ -468,18 +500,7 @@
         </div>
     </div>
     <script src="./js/modal.js"></script>
-    <script src="">
-        (() => {
-            document
-                .querySelector('.js-speaker-form')
-                .addEventListener('submit', e => {
-                    e.preventDefault();
-
-                    new FormData(e.currentTarget).forEach((value, vame) =>
-                        console.log('${name}: ${value}'),
-                    );
-                });
-        })();
-    </script>
+    <script src="./js/form.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 </html>
